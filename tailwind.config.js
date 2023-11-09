@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'bgColor':'#0077B605',
+        'bgColor':'#0077B610',
         'special-blue': '#0077B6',
         'black-color': '#020202',
         'shop': '#BEE8FF'
@@ -22,7 +22,8 @@ module.exports = {
         slideOut:{
           '0%':{transform: 'translateX(0)'},
           '100%': {transform: 'translateX(-18rem)'}
-        }
+        },
+        
       },
       animation: {
         slideIn: 'slideIn 200ms ease-in-out 1 forwards',

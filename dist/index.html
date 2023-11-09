@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body class="bg-bgColor">
-    <nav class="upper-nav w-screen h-20 bg-white flex flex-row items-center justify-between p-2 sticky top-0 z-50">
+    <nav class="upper-nav w-screen h-20 md:h-28 bg-white flex flex-row items-center justify-between p-2 sticky top-0 z-50">
         <section class="flex flex-row items-center gap-2">
             <a href="#" class="hamburger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 40 32" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-[30px] h-[24px] md:w-[36px] md:h-[28.8px ]" viewBox="0 0 40 32" fill="none">
                     <g clip-path="url(#clip0_47_176)">
                       <path d="M33.3334 16H16.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M33.3334 8L6.66669 8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -30,21 +30,21 @@
                     </defs>
                   </svg>
             </a>
-            <a href="#" class="brand-name font-playfairDisplay text-black-color font-bold text-lg">FashionAid</a>
+            <a href="#" class="brand-name font-playfairDisplay text-black-color font-bold text-xl md:text-2xl">FashionAid</a>
         </section>
 
-        <section class="menu-element hidden lg:flex">
-            <a href="#">Home</a>
-            <a href="#">All Shops</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">FAGs</a>
+        <section class="menu-element hidden md:flex flex-row items-center gap-3">
+            <a href="#" class="font-openSans font-semibold text-xl hidden lg:block text-gray-900">Home</a>
+            <a href="#" class="font-openSans font-semibold text-xl text-gray-900">All Shops</a>
+            <a href="#" class="font-openSans font-semibold text-xl text-gray-900">About</a>
+            <a href="#" class="font-openSans font-semibold text-xl text-gray-900">Contact</a>
+            <a href="#" class="font-openSans font-semibold text-xl text-gray-900">FAGs</a>
         </section>
 
-        <section class="search_signup">
-            <div class="hidden">
-                <input type="text" placeholder="Search...">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <section class="search_signup flex flex-row items-center gap-2">
+            <div class="hidden md:flex">
+                <input type="text" placeholder="Search..." class="hidden">
+                <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <mask id="mask0_43_54" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
                       <rect width="30" height="30" fill="#D9D9D9"/>
                     </mask>
@@ -52,10 +52,19 @@
                       <path d="M24.5 26.25L16.625 18.375C16 18.875 15.2812 19.2708 14.4688 19.5625C13.6562 19.8542 12.7917 20 11.875 20C9.60417 20 7.68229 19.2135 6.10938 17.6406C4.53646 16.0677 3.75 14.1458 3.75 11.875C3.75 9.60417 4.53646 7.68229 6.10938 6.10938C7.68229 4.53646 9.60417 3.75 11.875 3.75C14.1458 3.75 16.0677 4.53646 17.6406 6.10938C19.2135 7.68229 20 9.60417 20 11.875C20 12.7917 19.8542 13.6562 19.5625 14.4688C19.2708 15.2812 18.875 16 18.375 16.625L26.25 24.5L24.5 26.25ZM11.875 17.5C13.4375 17.5 14.7656 16.9531 15.8594 15.8594C16.9531 14.7656 17.5 13.4375 17.5 11.875C17.5 10.3125 16.9531 8.98438 15.8594 7.89062C14.7656 6.79688 13.4375 6.25 11.875 6.25C10.3125 6.25 8.98438 6.79688 7.89062 7.89062C6.79688 8.98438 6.25 10.3125 6.25 11.875C6.25 13.4375 6.79688 14.7656 7.89062 15.8594C8.98438 16.9531 10.3125 17.5 11.875 17.5Z" fill="#020202" fill-opacity="0.3"/>
                     </g>
                   </svg>
+                  <!-- search on medium screens -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <mask id="mask0_47_187" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+                      <rect width="36" height="36" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_47_187)">
+                      <path d="M28.9 32L19.45 22.55C18.7 23.15 17.8375 23.625 16.8625 23.975C15.8875 24.325 14.85 24.5 13.75 24.5C11.025 24.5 8.71875 23.5562 6.83125 21.6688C4.94375 19.7812 4 17.475 4 14.75C4 12.025 4.94375 9.71875 6.83125 7.83125C8.71875 5.94375 11.025 5 13.75 5C16.475 5 18.7812 5.94375 20.6688 7.83125C22.5562 9.71875 23.5 12.025 23.5 14.75C23.5 15.85 23.325 16.8875 22.975 17.8625C22.625 18.8375 22.15 19.7 21.55 20.45L31 29.9L28.9 32ZM13.75 21.5C15.625 21.5 17.2188 20.8438 18.5312 19.5312C19.8438 18.2188 20.5 16.625 20.5 14.75C20.5 12.875 19.8438 11.2812 18.5312 9.96875C17.2188 8.65625 15.625 8 13.75 8C11.875 8 10.2812 8.65625 8.96875 9.96875C7.65625 11.2812 7 12.875 7 14.75C7 16.625 7.65625 18.2188 8.96875 19.5312C10.2812 20.8438 11.875 21.5 13.75 21.5Z" fill="#020202" fill-opacity="0.9"/>
+                    </g>
+                  </svg>
             </div>
 
-            <a href="#" class="sign-up flex flex-row items-center justify-center bg-special-blue text-white rounded-3xl w-24 gap-1 h-[2.4rem] font-bold font-openSans text-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <a href="#" class="sign-up flex flex-row items-center justify-center bg-special-blue text-white rounded-3xl w-24 md:w-36 gap-1 h-[2.4rem] md:h-[3.2rem] font-bold font-openSans text-sm md:text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[20px] h-[20px] md:w-[28px] md:h-[28px]" viewBox="0 0 24 24" fill="none">
                     <mask id="mask0_50_695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                       <rect width="24" height="24" fill="#D9D9D9"/>
                     </mask>
@@ -70,18 +79,18 @@
         
     </nav>
    
-    <main class="p-3">
-      <aside class="side-bar fixed left-0 top-20 bg-white z-50 h-screen w-4/6 py-2 px-4 -translate-x-72">
-        <div class="categories">
-            <h3 class="font-playfairDisplay text-lg font-semibold">Categories</h3>
-        <div class="cat-list px-4 py-6 flex flex-col gap-5">
+    <main class="p-3 md:py-10 md:px-6">
+      <aside class="side-bar fixed left-0 top-20 bg-white z-50 h-screen w-4/6 md:w-1/3 py-2 px-4 -translate-x-72 md:-translate-x-full">
+        <div class="categories md:pt-10">
+            <h3 class="font-playfairDisplay text-xl font-semibold">Categories</h3>
+        <div class="cat-list px-4 py-6 flex flex-col gap-5 md:gap-10">
             <a href="#" class="flex flex-row items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <mask id="mask0_50_642" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                      <rect width="24" height="24" fill="#D9D9D9"/>
+                      <rect width="24" height="24" class="fill-special-blue"/>
                     </mask>
                     <g mask="url(#mask0_50_642)">
-                      <path d="M12 21L2 9L5 3H19L22 9L12 21ZM9.625 8H14.375L12.875 5H11.125L9.625 8ZM11 16.675V10H5.45L11 16.675ZM13 16.675L18.55 10H13V16.675ZM16.6 8H19.25L17.75 5H15.1L16.6 8ZM4.75 8H7.4L8.9 5H6.25L4.75 8Z" fill="#020202" fill-opacity="0.6"/>
+                      <path d="M12 21L2 9L5 3H19L22 9L12 21ZM9.625 8H14.375L12.875 5H11.125L9.625 8ZM11 16.675V10H5.45L11 16.675ZM13 16.675L18.55 10H13V16.675ZM16.6 8H19.25L17.75 5H15.1L16.6 8ZM4.75 8H7.4L8.9 5H6.25L4.75 8Z" fill="#0077B6" fill-opacity="0.6"/>
                     </g>
                   </svg>
                 <span class="font-openSans">Jewelry</span>
@@ -94,7 +103,7 @@
                       <rect width="24" height="24" fill="#D9D9D9"/>
                     </mask>
                     <g mask="url(#mask0_50_637)">
-                      <path d="M9 11.5V10H15V11.5H9ZM10 14.5V13H14V14.5H10ZM9 22L7.65 17.45C6.85 16.8167 6.20833 16.025 5.725 15.075C5.24167 14.125 5 13.1 5 12C5 10.9 5.24167 9.875 5.725 8.925C6.20833 7.975 6.85 7.18333 7.65 6.55L9 2H15L16.35 6.55C17.15 7.18333 17.7917 7.975 18.275 8.925C18.7583 9.875 19 10.9 19 12C19 13.1 18.7583 14.125 18.275 15.075C17.7917 16.025 17.15 16.8167 16.35 17.45L15 22H9ZM12 17C13.3833 17 14.5625 16.5125 15.5375 15.5375C16.5125 14.5625 17 13.3833 17 12C17 10.6167 16.5125 9.4375 15.5375 8.4625C14.5625 7.4875 13.3833 7 12 7C10.6167 7 9.4375 7.4875 8.4625 8.4625C7.4875 9.4375 7 10.6167 7 12C7 13.3833 7.4875 14.5625 8.4625 15.5375C9.4375 16.5125 10.6167 17 12 17ZM10.1 5.25C10.4333 5.16667 10.7542 5.1 11.0625 5.05C11.3708 5 11.6833 4.975 12 4.975C12.3167 4.975 12.6292 5 12.9375 5.05C13.2458 5.1 13.5667 5.16667 13.9 5.25L13.5 4H10.5L10.1 5.25ZM10.5 20H13.5L13.9 18.75C13.5667 18.8333 13.2458 18.8958 12.9375 18.9375C12.6292 18.9792 12.3167 19 12 19C11.6833 19 11.3708 18.9792 11.0625 18.9375C10.7542 18.8958 10.4333 18.8333 10.1 18.75L10.5 20ZM10.5 20H10.1H13.9H10.5Z" fill="#020202" fill-opacity="0.6"/>
+                      <path d="M9 11.5V10H15V11.5H9ZM10 14.5V13H14V14.5H10ZM9 22L7.65 17.45C6.85 16.8167 6.20833 16.025 5.725 15.075C5.24167 14.125 5 13.1 5 12C5 10.9 5.24167 9.875 5.725 8.925C6.20833 7.975 6.85 7.18333 7.65 6.55L9 2H15L16.35 6.55C17.15 7.18333 17.7917 7.975 18.275 8.925C18.7583 9.875 19 10.9 19 12C19 13.1 18.7583 14.125 18.275 15.075C17.7917 16.025 17.15 16.8167 16.35 17.45L15 22H9ZM12 17C13.3833 17 14.5625 16.5125 15.5375 15.5375C16.5125 14.5625 17 13.3833 17 12C17 10.6167 16.5125 9.4375 15.5375 8.4625C14.5625 7.4875 13.3833 7 12 7C10.6167 7 9.4375 7.4875 8.4625 8.4625C7.4875 9.4375 7 10.6167 7 12C7 13.3833 7.4875 14.5625 8.4625 15.5375C9.4375 16.5125 10.6167 17 12 17ZM10.1 5.25C10.4333 5.16667 10.7542 5.1 11.0625 5.05C11.3708 5 11.6833 4.975 12 4.975C12.3167 4.975 12.6292 5 12.9375 5.05C13.2458 5.1 13.5667 5.16667 13.9 5.25L13.5 4H10.5L10.1 5.25ZM10.5 20H13.5L13.9 18.75C13.5667 18.8333 13.2458 18.8958 12.9375 18.9375C12.6292 18.9792 12.3167 19 12 19C11.6833 19 11.3708 18.9792 11.0625 18.9375C10.7542 18.8958 10.4333 18.8333 10.1 18.75L10.5 20ZM10.5 20H10.1H13.9H10.5Z" fill="#0077B6" fill-opacity="0.6"/>
                     </g>
                 </svg>
                 <span class="font-openSans">Watches</span>
@@ -106,7 +115,7 @@
                       <rect width="24" height="24" fill="#D9D9D9"/>
                     </mask>
                     <g mask="url(#mask0_50_632)">
-                      <path d="M5 22C4.45 22 3.97917 21.8042 3.5875 21.4125C3.19583 21.0208 3 20.55 3 20V8C3 7.45 3.19583 6.97917 3.5875 6.5875C3.97917 6.19583 4.45 6 5 6H7C7 4.61667 7.4875 3.4375 8.4625 2.4625C9.4375 1.4875 10.6167 1 12 1C13.3833 1 14.5625 1.4875 15.5375 2.4625C16.5125 3.4375 17 4.61667 17 6H19C19.55 6 20.0208 6.19583 20.4125 6.5875C20.8042 6.97917 21 7.45 21 8V20C21 20.55 20.8042 21.0208 20.4125 21.4125C20.0208 21.8042 19.55 22 19 22H5ZM5 20H19V8H5V20ZM12 14C13.3833 14 14.5625 13.5125 15.5375 12.5375C16.5125 11.5625 17 10.3833 17 9H15C15 9.83333 14.7083 10.5417 14.125 11.125C13.5417 11.7083 12.8333 12 12 12C11.1667 12 10.4583 11.7083 9.875 11.125C9.29167 10.5417 9 9.83333 9 9H7C7 10.3833 7.4875 11.5625 8.4625 12.5375C9.4375 13.5125 10.6167 14 12 14ZM9 6H15C15 5.16667 14.7083 4.45833 14.125 3.875C13.5417 3.29167 12.8333 3 12 3C11.1667 3 10.4583 3.29167 9.875 3.875C9.29167 4.45833 9 5.16667 9 6Z" fill="#020202" fill-opacity="0.6"/>
+                      <path d="M5 22C4.45 22 3.97917 21.8042 3.5875 21.4125C3.19583 21.0208 3 20.55 3 20V8C3 7.45 3.19583 6.97917 3.5875 6.5875C3.97917 6.19583 4.45 6 5 6H7C7 4.61667 7.4875 3.4375 8.4625 2.4625C9.4375 1.4875 10.6167 1 12 1C13.3833 1 14.5625 1.4875 15.5375 2.4625C16.5125 3.4375 17 4.61667 17 6H19C19.55 6 20.0208 6.19583 20.4125 6.5875C20.8042 6.97917 21 7.45 21 8V20C21 20.55 20.8042 21.0208 20.4125 21.4125C20.0208 21.8042 19.55 22 19 22H5ZM5 20H19V8H5V20ZM12 14C13.3833 14 14.5625 13.5125 15.5375 12.5375C16.5125 11.5625 17 10.3833 17 9H15C15 9.83333 14.7083 10.5417 14.125 11.125C13.5417 11.7083 12.8333 12 12 12C11.1667 12 10.4583 11.7083 9.875 11.125C9.29167 10.5417 9 9.83333 9 9H7C7 10.3833 7.4875 11.5625 8.4625 12.5375C9.4375 13.5125 10.6167 14 12 14ZM9 6H15C15 5.16667 14.7083 4.45833 14.125 3.875C13.5417 3.29167 12.8333 3 12 3C11.1667 3 10.4583 3.29167 9.875 3.875C9.29167 4.45833 9 5.16667 9 6Z" fill="#0077B6" fill-opacity="0.6"/>
                     </g>
                 </svg>
                 <span class="font-openSans">Bags</span>
@@ -118,7 +127,7 @@
                       <rect width="24" height="24" fill="#D9D9D9"/>
                     </mask>
                     <g mask="url(#mask0_50_614)">
-                      <path d="M6 10.95L5 11.5C4.76666 11.6333 4.51666 11.6667 4.25 11.6C3.98333 11.5333 3.78333 11.3833 3.65 11.15L1.65 7.65C1.51666 7.41667 1.48333 7.16667 1.55 6.9C1.61666 6.63333 1.76666 6.43333 2 6.3L7.75 3H9.5C9.65 3 9.77083 3.04583 9.8625 3.1375C9.95416 3.22917 10 3.35 10 3.5V4C10 4.55 10.1958 5.02083 10.5875 5.4125C10.9792 5.80417 11.45 6 12 6C12.55 6 13.0208 5.80417 13.4125 5.4125C13.8042 5.02083 14 4.55 14 4V3.5C14 3.35 14.0458 3.22917 14.1375 3.1375C14.2292 3.04583 14.35 3 14.5 3H16.25L22 6.3C22.2333 6.43333 22.3833 6.63333 22.45 6.9C22.5167 7.16667 22.4833 7.41667 22.35 7.65L20.35 11.15C20.2167 11.3833 20.0208 11.5292 19.7625 11.5875C19.5042 11.6458 19.25 11.6083 19 11.475L18 10.975V20C18 20.2833 17.9042 20.5208 17.7125 20.7125C17.5208 20.9042 17.2833 21 17 21H7C6.71666 21 6.47916 20.9042 6.2875 20.7125C6.09583 20.5208 6 20.2833 6 20V10.95ZM8 7.6V19H16V7.6L19.1 9.3L20.15 7.55L15.85 5.05C15.6 5.9 15.1292 6.60417 14.4375 7.1625C13.7458 7.72083 12.9333 8 12 8C11.0667 8 10.2542 7.72083 9.5625 7.1625C8.87083 6.60417 8.4 5.9 8.15 5.05L3.85 7.55L4.9 9.3L8 7.6Z" fill="#020202" fill-opacity="0.6"/>
+                      <path d="M6 10.95L5 11.5C4.76666 11.6333 4.51666 11.6667 4.25 11.6C3.98333 11.5333 3.78333 11.3833 3.65 11.15L1.65 7.65C1.51666 7.41667 1.48333 7.16667 1.55 6.9C1.61666 6.63333 1.76666 6.43333 2 6.3L7.75 3H9.5C9.65 3 9.77083 3.04583 9.8625 3.1375C9.95416 3.22917 10 3.35 10 3.5V4C10 4.55 10.1958 5.02083 10.5875 5.4125C10.9792 5.80417 11.45 6 12 6C12.55 6 13.0208 5.80417 13.4125 5.4125C13.8042 5.02083 14 4.55 14 4V3.5C14 3.35 14.0458 3.22917 14.1375 3.1375C14.2292 3.04583 14.35 3 14.5 3H16.25L22 6.3C22.2333 6.43333 22.3833 6.63333 22.45 6.9C22.5167 7.16667 22.4833 7.41667 22.35 7.65L20.35 11.15C20.2167 11.3833 20.0208 11.5292 19.7625 11.5875C19.5042 11.6458 19.25 11.6083 19 11.475L18 10.975V20C18 20.2833 17.9042 20.5208 17.7125 20.7125C17.5208 20.9042 17.2833 21 17 21H7C6.71666 21 6.47916 20.9042 6.2875 20.7125C6.09583 20.5208 6 20.2833 6 20V10.95ZM8 7.6V19H16V7.6L19.1 9.3L20.15 7.55L15.85 5.05C15.6 5.9 15.1292 6.60417 14.4375 7.1625C13.7458 7.72083 12.9333 8 12 8C11.0667 8 10.2542 7.72083 9.5625 7.1625C8.87083 6.60417 8.4 5.9 8.15 5.05L3.85 7.55L4.9 9.3L8 7.6Z" fill="#0077B6" fill-opacity="0.6"/>
                     </g>
                 </svg>
                 <span class="font-openSans">Blouse</span>
@@ -126,10 +135,10 @@
 
             <a href="#" class="flex flex-row items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="26" viewBox="0 0 19 26" fill="none">
-                    <path d="M9.42622 8.88533C8.3473 8.88533 7.3468 9.62718 7.3468 10.0774C7.3468 10.5276 6.50403 25 6.50403 25H1V8.39184V3.12451V1H9.42774H17.8555V3.12451V8.39184V25H12.3514C12.3514 25 11.5087 10.5276 11.5087 10.0774C11.5087 9.62714 10.5082 8.88533 9.42925 8.88533" stroke="#020202" stroke-opacity="0.6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9.63843 3.99707C10.1039 3.99707 10.4812 3.61975 10.4812 3.1543C10.4812 2.68885 10.1039 2.31152 9.63843 2.31152C9.17298 2.31152 8.79565 2.68885 8.79565 3.1543C8.79565 3.61975 9.17298 3.99707 9.63843 3.99707Z" fill="black"/>
-                    <path d="M14.1642 2.41992C14.1642 2.41992 13.1516 6.18628 16.7294 7.25179" stroke="#020202" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4.69121 2.41992C4.69121 2.41992 5.7038 6.18628 2.12598 7.25179" stroke="#020202" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.42622 8.88533C8.3473 8.88533 7.3468 9.62718 7.3468 10.0774C7.3468 10.5276 6.50403 25 6.50403 25H1V8.39184V3.12451V1H9.42774H17.8555V3.12451V8.39184V25H12.3514C12.3514 25 11.5087 10.5276 11.5087 10.0774C11.5087 9.62714 10.5082 8.88533 9.42925 8.88533" stroke="#0077B6" stroke-opacity="0.6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.63843 3.99707C10.1039 3.99707 10.4812 3.61975 10.4812 3.1543C10.4812 2.68885 10.1039 2.31152 9.63843 2.31152C9.17298 2.31152 8.79565 2.68885 8.79565 3.1543C8.79565 3.61975 9.17298 3.99707 9.63843 3.99707Z" fill="#0077B6"/>
+                    <path d="M14.1642 2.41992C14.1642 2.41992 13.1516 6.18628 16.7294 7.25179" stroke="#0077B6" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.69121 2.41992C4.69121 2.41992 5.7038 6.18628 2.12598 7.25179" stroke="#0077B6" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <span class="font-openSans">Trousers</span>
             </a>
@@ -140,7 +149,7 @@
                       <rect width="24" height="24" fill="#D9D9D9"/>
                     </mask>
                     <g mask="url(#mask0_50_626)">
-                      <path d="M7.875 18C6.59167 18 5.61667 17.525 4.95 16.575C4.28333 15.625 3.96667 14.5583 4 13.375L3.55 12.7C3.36667 12.4167 3.0625 11.775 2.6375 10.775C2.2125 9.775 2 8.51667 2 7C2 5.28333 2.425 3.85417 3.275 2.7125C4.125 1.57083 5.2 1 6.5 1C7.91667 1 9.02083 1.62917 9.8125 2.8875C10.6042 4.14583 11 5.51667 11 7C11 7.96667 10.8667 8.85833 10.6 9.675C10.3333 10.4917 10.1 11.15 9.9 11.65L10.1 11.975C10.2333 12.2083 10.4167 12.5792 10.65 13.0875C10.8833 13.5958 11 14.125 11 14.675C11 15.625 10.7042 16.4167 10.1125 17.05C9.52083 17.6833 8.775 18 7.875 18ZM5.25 11.6L8 11.05C8.21667 10.5167 8.4375 9.90833 8.6625 9.225C8.8875 8.54167 9 7.8 9 7C9 6 8.77083 5.08333 8.3125 4.25C7.85417 3.41667 7.25 3 6.5 3C5.75 3 5.14583 3.41667 4.6875 4.25C4.22917 5.08333 4 6 4 7C4 8.05 4.14583 8.97917 4.4375 9.7875C4.72917 10.5958 5 11.2 5.25 11.6ZM7.875 16C8.19167 16 8.45833 15.8833 8.675 15.65C8.89167 15.4167 9 15.0917 9 14.675C9 14.3917 8.93333 14.1 8.8 13.8C8.66667 13.5 8.53333 13.2333 8.4 13L6 13.5C6 14.1667 6.14583 14.75 6.4375 15.25C6.72917 15.75 7.20833 16 7.875 16ZM16.125 23C15.225 23 14.4792 22.6833 13.8875 22.05C13.2958 21.4167 13 20.625 13 19.675C13 19.125 13.1167 18.5958 13.35 18.0875C13.5833 17.5792 13.7667 17.2083 13.9 16.975L14.1 16.65C13.9 16.15 13.6667 15.4917 13.4 14.675C13.1333 13.8583 13 12.9667 13 12C13 10.5167 13.3958 9.14583 14.1875 7.8875C14.9792 6.62917 16.0833 6 17.5 6C18.8 6 19.875 6.57083 20.725 7.7125C21.575 8.85417 22 10.2833 22 12C22 13.5167 21.7875 14.7708 21.3625 15.7625C20.9375 16.7542 20.6333 17.3917 20.45 17.675L20 18.375C20.0167 19.5583 19.6958 20.625 19.0375 21.575C18.3792 22.525 17.4083 23 16.125 23ZM18.75 16.6C19 16.2 19.2708 15.6 19.5625 14.8C19.8542 14 20 13.0667 20 12C20 11 19.7708 10.0833 19.3125 9.25C18.8542 8.41667 18.25 8 17.5 8C16.75 8 16.1458 8.41667 15.6875 9.25C15.2292 10.0833 15 11 15 12C15 12.8 15.1125 13.5375 15.3375 14.2125C15.5625 14.8875 15.7833 15.5 16 16.05L18.75 16.6ZM16.125 21C16.7917 21 17.2708 20.75 17.5625 20.25C17.8542 19.75 18 19.1667 18 18.5L15.6 18C15.4667 18.2333 15.3333 18.5 15.2 18.8C15.0667 19.1 15 19.3917 15 19.675C15 20.0083 15.1042 20.3125 15.3125 20.5875C15.5208 20.8625 15.7917 21 16.125 21Z" fill="#020202" fill-opacity="0.6"/>
+                      <path d="M7.875 18C6.59167 18 5.61667 17.525 4.95 16.575C4.28333 15.625 3.96667 14.5583 4 13.375L3.55 12.7C3.36667 12.4167 3.0625 11.775 2.6375 10.775C2.2125 9.775 2 8.51667 2 7C2 5.28333 2.425 3.85417 3.275 2.7125C4.125 1.57083 5.2 1 6.5 1C7.91667 1 9.02083 1.62917 9.8125 2.8875C10.6042 4.14583 11 5.51667 11 7C11 7.96667 10.8667 8.85833 10.6 9.675C10.3333 10.4917 10.1 11.15 9.9 11.65L10.1 11.975C10.2333 12.2083 10.4167 12.5792 10.65 13.0875C10.8833 13.5958 11 14.125 11 14.675C11 15.625 10.7042 16.4167 10.1125 17.05C9.52083 17.6833 8.775 18 7.875 18ZM5.25 11.6L8 11.05C8.21667 10.5167 8.4375 9.90833 8.6625 9.225C8.8875 8.54167 9 7.8 9 7C9 6 8.77083 5.08333 8.3125 4.25C7.85417 3.41667 7.25 3 6.5 3C5.75 3 5.14583 3.41667 4.6875 4.25C4.22917 5.08333 4 6 4 7C4 8.05 4.14583 8.97917 4.4375 9.7875C4.72917 10.5958 5 11.2 5.25 11.6ZM7.875 16C8.19167 16 8.45833 15.8833 8.675 15.65C8.89167 15.4167 9 15.0917 9 14.675C9 14.3917 8.93333 14.1 8.8 13.8C8.66667 13.5 8.53333 13.2333 8.4 13L6 13.5C6 14.1667 6.14583 14.75 6.4375 15.25C6.72917 15.75 7.20833 16 7.875 16ZM16.125 23C15.225 23 14.4792 22.6833 13.8875 22.05C13.2958 21.4167 13 20.625 13 19.675C13 19.125 13.1167 18.5958 13.35 18.0875C13.5833 17.5792 13.7667 17.2083 13.9 16.975L14.1 16.65C13.9 16.15 13.6667 15.4917 13.4 14.675C13.1333 13.8583 13 12.9667 13 12C13 10.5167 13.3958 9.14583 14.1875 7.8875C14.9792 6.62917 16.0833 6 17.5 6C18.8 6 19.875 6.57083 20.725 7.7125C21.575 8.85417 22 10.2833 22 12C22 13.5167 21.7875 14.7708 21.3625 15.7625C20.9375 16.7542 20.6333 17.3917 20.45 17.675L20 18.375C20.0167 19.5583 19.6958 20.625 19.0375 21.575C18.3792 22.525 17.4083 23 16.125 23ZM18.75 16.6C19 16.2 19.2708 15.6 19.5625 14.8C19.8542 14 20 13.0667 20 12C20 11 19.7708 10.0833 19.3125 9.25C18.8542 8.41667 18.25 8 17.5 8C16.75 8 16.1458 8.41667 15.6875 9.25C15.2292 10.0833 15 11 15 12C15 12.8 15.1125 13.5375 15.3375 14.2125C15.5625 14.8875 15.7833 15.5 16 16.05L18.75 16.6ZM16.125 21C16.7917 21 17.2708 20.75 17.5625 20.25C17.8542 19.75 18 19.1667 18 18.5L15.6 18C15.4667 18.2333 15.3333 18.5 15.2 18.8C15.0667 19.1 15 19.3917 15 19.675C15 20.0083 15.1042 20.3125 15.3125 20.5875C15.5208 20.8625 15.7917 21 16.125 21Z" fill="#0077B6" fill-opacity="0.6"/>
                     </g>
                 </svg>
                 <span class="font-openSans">Shoes</span>
@@ -148,10 +157,10 @@
         </div>
         </div>
 
-        <div class="prices">
-            <h3 class="font-playfairDisplay text-lg font-semibold">Price Range</h3>
+        <div class="prices md:py-5">
+            <h3 class="font-playfairDisplay text-xl font-semibold">Price Range</h3>
             <div class="flex flex-col px-4 py-4 gap-2">
-                <input type="range" name="price_range" id="price_range" min="0" max="100000">
+                <input type="range" name="price_range" id="price_range" min="0" max="100000" >
                 
                 <input type="number" name="price_dig" id="price_dig" placeholder="Price in Ghc" class="hidden">
 
@@ -159,19 +168,19 @@
             </div>
         </div>
 
-        <div class="flex flex-row items-center w-full justify-between">
+        <div class="flex flex-row items-center w-full justify-between md:hidden">
             <a href="#" class="font-semibold font-openSans">About</a>
             <a href="#" class="font-semibold font-openSans">Contact</a>
             <a href="#" class="font-semibold font-openSans">FAGs</a>
         </div>
 
-    </aside>
+      </aside>
 
-      <div class="filters_card_list flex flex-row justify-between items-center">
+        <div class="filters_card_list flex flex-row justify-between items-center">
             <div class="filter flex flex-row gap-3 items-center">
-                <a href="#" class="font-openSans font-semibold text-lg text-[rgba(2, 2, 2, 0.60)]">Latest</a>
-                <a href="#" class="font-openSans font-semibold text-lg text-[rgba(2, 2, 2, 0.60)]">Popular</a>
-                <a href="#" class="font-openSans font-semibold text-lg text-[rgba(2, 2, 2, 0.60)]">All</a>
+                <a href="#" class="font-openSans font-semibold text-xl text-[rgba(2, 2, 2, 0.60)] transition-transform hover:scale-150">Latest</a>
+                <a href="#" class="font-openSans font-semibold text-xl text-[rgba(2, 2, 2, 0.60)]">Popular</a>
+                <a href="#" class="font-openSans font-semibold text-xl text-[rgba(2, 2, 2, 0.60)]">All</a>
             </div>
 
             <div class="card_list hidden">
@@ -195,11 +204,11 @@
 
         <div class="promoted_shop flex flex-col py-5 gap-2 relative">
             <span class="font-openSans text-sm text-gray-500">Promoted Shop</span>
-            <div class="card w-full min-h-[12rem] h-auto bg-shop rounded-3xl px-3 py-5 flex flex-row items-center justify-between relative">
-                <section class="flex flex-col gap-4">
-                    <h2 class="font-poppins font-bold text-lg">Ohene's Creative Closet</h2>
-                    <span class="font-poppins text-sm font-bold text-gray-500">Get all your stylish shoes from us</span>
-                    <a href="#" class="book-now flex flex-row items-center justify-center bg-special-blue text-white rounded-3xl w-28 gap-1 h-[2.4rem] font-semibold text-sm font-openSans">
+            <div class="card w-full min-h-[12rem] h-auto bg-shop rounded-3xl px-3 md:px-6 py-5 flex flex-row items-center justify-between relative">
+                <section class="flex flex-col gap-4 md:justify-evenly md:gap-5">
+                    <h2 class="font-poppins font-bold text-xl md:text-3xl">Ohene's Creative Closet</h2>
+                    <span class="font-poppins text-sm md:text-base font-bold text-gray-500">Get all your stylish shoes from us</span>
+                    <a href="#" class="book-now flex flex-row items-center justify-center bg-special-blue text-white rounded-3xl w-28 gap-1 h-[2.4rem] md:h-[3rem] md:w-36 font-semibold text-sm md:text-base font-openSans">
                         <span>Shop Now</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 23" fill="none">
                             <mask id="mask0_48_335" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="23">
@@ -211,81 +220,81 @@
                         </svg>
                     </a>
                 </section>
-                <section class="w-1/2">
+                <section class="w-1/2 md:w-1/3">
                     <img src="./imgs/oh.png" alt="" class="w-full">
                 </section>
             </div>
         </div>
 
-        <div class="post-container grid grid-cols-2 gap-x-2 gap-y-4 p-2">
+        <div class="post-container grid grid-cols-2 gap-x-2 gap-y-4 md:gap-4 p-2">
 
-            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-lg relative">
-                <div class="product-img">
-                    <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl">
+            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
+                <div class="product-img ">
+                    <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl ">
                 </div>
-                <div class="product-info h-1/4 bg-white w-full flex flex-col pt-2 rounded-b-lg">
-                    <div class="name-price flex flex-row items-center justify-between w-full px-2">
-                        <h3 class="font-playfairDisplay font-semibold text-base">Nike Shoe</h3>
-                        <h4 class="font-openSans font-semibold">Ghc 700</h4>
+                <div class="product-info h-1/4 bg-white w-full flex flex-col py-2 rounded-b-xl ">
+                    <div class="name-price flex flex-row items-center justify-between w-full px-2 md:px-4">
+                        <h3 class="font-playfairDisplay font-semibold text-base md:text-2xl">Nike Shoe</h3>
+                        <h4 class="font-openSans font-semibold md:text-2xl">Ghc 700</h4>
                     </div>
                     <div class="location flex flex-row items-center gap-0.5 p-2">
                         <img src="./imgs/location.png" alt="" class="w-5 h-5">
-                        <span class="text-gray-700 text-sm font-openSans ">Opposite MU</span>
+                        <span class="text-gray-700 text-sm font-openSans md:text-base ">Opposite MU</span>
                     </div>
                 </div>
             </a>
 
-            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-lg relative">
+            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
                 <div class="product-img">
                     <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl">
                 </div>
-                <div class="product-info h-1/4 bg-white w-full flex flex-col pt-2 rounded-b-lg">
-                    <div class="name-price flex flex-row items-center justify-between w-full px-2">
-                        <h3 class="font-playfairDisplay font-semibold text-base">Nike Shoe</h3>
-                        <h4 class="font-openSans font-semibold">Ghc 700</h4>
+                <div class="product-info h-1/4 bg-white w-full flex flex-col py-2 rounded-b-xl ">
+                    <div class="name-price flex flex-row items-center justify-between w-full px-2 md:px-4">
+                        <h3 class="font-playfairDisplay font-semibold text-base md:text-2xl">Nike Shoe</h3>
+                        <h4 class="font-openSans font-semibold md:text-2xl">Ghc 700</h4>
                     </div>
                     <div class="location flex flex-row items-center gap-0.5 p-2">
                         <img src="./imgs/location.png" alt="" class="w-5 h-5">
-                        <span class="text-gray-700 text-sm font-openSans ">Opposite MU</span>
+                        <span class="text-gray-700 text-sm font-openSans md:text-base ">Opposite MU</span>
                     </div>
                 </div>
             </a>
 
-            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-lg relative">
+            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
                 <div class="product-img">
                     <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl">
                 </div>
-                <div class="product-info h-1/4 bg-white w-full flex flex-col pt-2 rounded-b-lg">
-                    <div class="name-price flex flex-row items-center justify-between w-full px-2">
-                        <h3 class="font-playfairDisplay font-semibold text-base">Nike Shoe</h3>
-                        <h4 class="font-openSans font-semibold">Ghc 700</h4>
+                <div class="product-info h-1/4 bg-white w-full flex flex-col py-2 rounded-b-xl ">
+                    <div class="name-price flex flex-row items-center justify-between w-full px-2 md:px-4">
+                        <h3 class="font-playfairDisplay font-semibold text-base md:text-2xl">Nike Shoe</h3>
+                        <h4 class="font-openSans font-semibold md:text-2xl">Ghc 700</h4>
                     </div>
                     <div class="location flex flex-row items-center gap-0.5 p-2">
                         <img src="./imgs/location.png" alt="" class="w-5 h-5">
-                        <span class="text-gray-700 text-sm font-openSans ">Opposite MU</span>
+                        <span class="text-gray-700 text-sm font-openSans md:text-base ">Opposite MU</span>
                     </div>
                 </div>
             </a>
 
-            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-lg relative">
+            <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
                 <div class="product-img">
                     <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl">
                 </div>
-                <div class="product-info h-1/4 bg-white w-full flex flex-col pt-2 rounded-b-lg">
-                    <div class="name-price flex flex-row items-center justify-between w-full px-2">
-                        <h3 class="font-playfairDisplay font-semibold text-base">Nike Shoe</h3>
-                        <h4 class="font-openSans font-semibold">Ghc 700</h4>
+                <div class="product-info h-1/4 bg-white w-full flex flex-col py-2 rounded-b-xl ">
+                    <div class="name-price flex flex-row items-center justify-between w-full px-2 md:px-4">
+                        <h3 class="font-playfairDisplay font-semibold text-base md:text-2xl">Nike Shoe</h3>
+                        <h4 class="font-openSans font-semibold md:text-2xl">Ghc 700</h4>
                     </div>
                     <div class="location flex flex-row items-center gap-0.5 p-2">
                         <img src="./imgs/location.png" alt="" class="w-5 h-5">
-                        <span class="text-gray-700 text-sm font-openSans ">Opposite MU</span>
+                        <span class="text-gray-700 text-sm font-openSans md:text-base ">Opposite MU</span>
                     </div>
                 </div>
             </a>
 
         </div>
     </main>
-    <nav class="lower-nav bg-white w-screen h-20 flex flex-row items-center justify-between py-2 px-5 sticky z-50 bottom-0">
+    <nav class="lower-nav bg-white w-screen h-20 flex flex-row items-center justify-between py-2 px-5 sticky z-50 bottom-0 md:hidden">
         <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                 <mask id="mask0_48_219" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
