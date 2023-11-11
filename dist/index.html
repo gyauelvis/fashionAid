@@ -13,10 +13,10 @@
     <!-- link to google icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body class="bg-bgColor">
+<body class="bg-bgColor w-screen overflow-x-hidden">
     <nav class="upper-nav w-screen h-20 md:h-28 lg:h-20 bg-white flex flex-row items-center justify-between p-2 sticky top-0 z-50 lg:px-10">
         <section class="flex flex-row items-center gap-2">
-            <a href="#" class="hamburger">
+            <a href="#" class="hamburger lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-[30px] h-[24px] md:w-[36px] md:h-[28.8px ]" viewBox="0 0 40 32" fill="none">
                     <g clip-path="url(#clip0_47_176)">
                       <path d="M33.3334 16H16.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,86 +78,84 @@
         </section>
         
     </nav>
-   
-    <main class="p-3 md:py-10 lg:py-0 md:px-6 lg:px-10 lg:flex flex-row">
-      <aside class="side-bar fixed lg:relative left-0 top-20 lg:top-0 bg-white lg:bg-transparent z-50 lg:z-0 h-screen w-4/6 md:w-1/3 py-2 px-4 -translate-x-72 md:-translate-x-full lg:-translate-x-0">
-        <div class="categories md:pt-10">
-            <h3 class="font-playfairDisplay text-xl font-semibold">Categories</h3>
-        <div class="cat-list px-4 py-6 flex flex-col gap-5 md:gap-10">
-            <a href="#" class="flex flex-row items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <mask id="mask0_50_642" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                      <rect width="24" height="24" class="fill-special-blue"/>
-                    </mask>
-                    <g mask="url(#mask0_50_642)">
-                      <path d="M12 21L2 9L5 3H19L22 9L12 21ZM9.625 8H14.375L12.875 5H11.125L9.625 8ZM11 16.675V10H5.45L11 16.675ZM13 16.675L18.55 10H13V16.675ZM16.6 8H19.25L17.75 5H15.1L16.6 8ZM4.75 8H7.4L8.9 5H6.25L4.75 8Z" fill="#0077B6" fill-opacity="0.6"/>
-                    </g>
-                  </svg>
-                <span class="font-openSans">Jewelry</span>
-            </a>
+    <main class="p-3 md:py-10 lg:py-0 md:px-6 lg:px-10 lg:grid grid-cols-8">
+      <aside class="side-bar fixed lg:sticky left-0 top-20 bg-white lg:bg-transparent z-50 lg:z-0 h-screen w-4/6 md:w-1/3 lg:w-5/6 py-2 px-4 -translate-x-72 md:-translate-x-full lg:-translate-x-0 lg:grid col-span-2 lg:gap">
+        <div class="categories md:pt-10 lg:pt-5 lg:bg-white lg:rounded-3xl lg:flex flex-col justify-center">
+            <h3 class="font-playfairDisplay text-xl font-semibold lg:px-5">Categories</h3>
+            <div class="cat-list px-4 py-6 lg:py-6 lg:px-10 flex flex-col gap-5 md:gap-10 lg:gap-6">
+                <a href="#" class="flex flex-row items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_50_642" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" class="fill-special-blue"/>
+                        </mask>
+                        <g mask="url(#mask0_50_642)">
+                          <path d="M12 21L2 9L5 3H19L22 9L12 21ZM9.625 8H14.375L12.875 5H11.125L9.625 8ZM11 16.675V10H5.45L11 16.675ZM13 16.675L18.55 10H13V16.675ZM16.6 8H19.25L17.75 5H15.1L16.6 8ZM4.75 8H7.4L8.9 5H6.25L4.75 8Z" fill="#0077B6" fill-opacity="0.6"/>
+                        </g>
+                      </svg>
+                    <span class="font-openSans">Jewelry</span>
+                </a>
 
+                <a href="#" class="flex flex-row items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_50_637" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_50_637)">
+                          <path d="M9 11.5V10H15V11.5H9ZM10 14.5V13H14V14.5H10ZM9 22L7.65 17.45C6.85 16.8167 6.20833 16.025 5.725 15.075C5.24167 14.125 5 13.1 5 12C5 10.9 5.24167 9.875 5.725 8.925C6.20833 7.975 6.85 7.18333 7.65 6.55L9 2H15L16.35 6.55C17.15 7.18333 17.7917 7.975 18.275 8.925C18.7583 9.875 19 10.9 19 12C19 13.1 18.7583 14.125 18.275 15.075C17.7917 16.025 17.15 16.8167 16.35 17.45L15 22H9ZM12 17C13.3833 17 14.5625 16.5125 15.5375 15.5375C16.5125 14.5625 17 13.3833 17 12C17 10.6167 16.5125 9.4375 15.5375 8.4625C14.5625 7.4875 13.3833 7 12 7C10.6167 7 9.4375 7.4875 8.4625 8.4625C7.4875 9.4375 7 10.6167 7 12C7 13.3833 7.4875 14.5625 8.4625 15.5375C9.4375 16.5125 10.6167 17 12 17ZM10.1 5.25C10.4333 5.16667 10.7542 5.1 11.0625 5.05C11.3708 5 11.6833 4.975 12 4.975C12.3167 4.975 12.6292 5 12.9375 5.05C13.2458 5.1 13.5667 5.16667 13.9 5.25L13.5 4H10.5L10.1 5.25ZM10.5 20H13.5L13.9 18.75C13.5667 18.8333 13.2458 18.8958 12.9375 18.9375C12.6292 18.9792 12.3167 19 12 19C11.6833 19 11.3708 18.9792 11.0625 18.9375C10.7542 18.8958 10.4333 18.8333 10.1 18.75L10.5 20ZM10.5 20H10.1H13.9H10.5Z" fill="#0077B6" fill-opacity="0.6"/>
+                        </g>
+                    </svg>
+                    <span class="font-openSans">Watches</span>
+                </a>
 
-            <a href="#" class="flex flex-row items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <mask id="mask0_50_637" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                      <rect width="24" height="24" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_50_637)">
-                      <path d="M9 11.5V10H15V11.5H9ZM10 14.5V13H14V14.5H10ZM9 22L7.65 17.45C6.85 16.8167 6.20833 16.025 5.725 15.075C5.24167 14.125 5 13.1 5 12C5 10.9 5.24167 9.875 5.725 8.925C6.20833 7.975 6.85 7.18333 7.65 6.55L9 2H15L16.35 6.55C17.15 7.18333 17.7917 7.975 18.275 8.925C18.7583 9.875 19 10.9 19 12C19 13.1 18.7583 14.125 18.275 15.075C17.7917 16.025 17.15 16.8167 16.35 17.45L15 22H9ZM12 17C13.3833 17 14.5625 16.5125 15.5375 15.5375C16.5125 14.5625 17 13.3833 17 12C17 10.6167 16.5125 9.4375 15.5375 8.4625C14.5625 7.4875 13.3833 7 12 7C10.6167 7 9.4375 7.4875 8.4625 8.4625C7.4875 9.4375 7 10.6167 7 12C7 13.3833 7.4875 14.5625 8.4625 15.5375C9.4375 16.5125 10.6167 17 12 17ZM10.1 5.25C10.4333 5.16667 10.7542 5.1 11.0625 5.05C11.3708 5 11.6833 4.975 12 4.975C12.3167 4.975 12.6292 5 12.9375 5.05C13.2458 5.1 13.5667 5.16667 13.9 5.25L13.5 4H10.5L10.1 5.25ZM10.5 20H13.5L13.9 18.75C13.5667 18.8333 13.2458 18.8958 12.9375 18.9375C12.6292 18.9792 12.3167 19 12 19C11.6833 19 11.3708 18.9792 11.0625 18.9375C10.7542 18.8958 10.4333 18.8333 10.1 18.75L10.5 20ZM10.5 20H10.1H13.9H10.5Z" fill="#0077B6" fill-opacity="0.6"/>
-                    </g>
-                </svg>
-                <span class="font-openSans">Watches</span>
-            </a>
+                <a href="#" class="flex flex-row items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_50_632" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_50_632)">
+                          <path d="M5 22C4.45 22 3.97917 21.8042 3.5875 21.4125C3.19583 21.0208 3 20.55 3 20V8C3 7.45 3.19583 6.97917 3.5875 6.5875C3.97917 6.19583 4.45 6 5 6H7C7 4.61667 7.4875 3.4375 8.4625 2.4625C9.4375 1.4875 10.6167 1 12 1C13.3833 1 14.5625 1.4875 15.5375 2.4625C16.5125 3.4375 17 4.61667 17 6H19C19.55 6 20.0208 6.19583 20.4125 6.5875C20.8042 6.97917 21 7.45 21 8V20C21 20.55 20.8042 21.0208 20.4125 21.4125C20.0208 21.8042 19.55 22 19 22H5ZM5 20H19V8H5V20ZM12 14C13.3833 14 14.5625 13.5125 15.5375 12.5375C16.5125 11.5625 17 10.3833 17 9H15C15 9.83333 14.7083 10.5417 14.125 11.125C13.5417 11.7083 12.8333 12 12 12C11.1667 12 10.4583 11.7083 9.875 11.125C9.29167 10.5417 9 9.83333 9 9H7C7 10.3833 7.4875 11.5625 8.4625 12.5375C9.4375 13.5125 10.6167 14 12 14ZM9 6H15C15 5.16667 14.7083 4.45833 14.125 3.875C13.5417 3.29167 12.8333 3 12 3C11.1667 3 10.4583 3.29167 9.875 3.875C9.29167 4.45833 9 5.16667 9 6Z" fill="#0077B6" fill-opacity="0.6"/>
+                        </g>
+                    </svg>
+                    <span class="font-openSans">Bags</span>
+                </a>
 
-            <a href="#" class="flex flex-row items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <mask id="mask0_50_632" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                      <rect width="24" height="24" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_50_632)">
-                      <path d="M5 22C4.45 22 3.97917 21.8042 3.5875 21.4125C3.19583 21.0208 3 20.55 3 20V8C3 7.45 3.19583 6.97917 3.5875 6.5875C3.97917 6.19583 4.45 6 5 6H7C7 4.61667 7.4875 3.4375 8.4625 2.4625C9.4375 1.4875 10.6167 1 12 1C13.3833 1 14.5625 1.4875 15.5375 2.4625C16.5125 3.4375 17 4.61667 17 6H19C19.55 6 20.0208 6.19583 20.4125 6.5875C20.8042 6.97917 21 7.45 21 8V20C21 20.55 20.8042 21.0208 20.4125 21.4125C20.0208 21.8042 19.55 22 19 22H5ZM5 20H19V8H5V20ZM12 14C13.3833 14 14.5625 13.5125 15.5375 12.5375C16.5125 11.5625 17 10.3833 17 9H15C15 9.83333 14.7083 10.5417 14.125 11.125C13.5417 11.7083 12.8333 12 12 12C11.1667 12 10.4583 11.7083 9.875 11.125C9.29167 10.5417 9 9.83333 9 9H7C7 10.3833 7.4875 11.5625 8.4625 12.5375C9.4375 13.5125 10.6167 14 12 14ZM9 6H15C15 5.16667 14.7083 4.45833 14.125 3.875C13.5417 3.29167 12.8333 3 12 3C11.1667 3 10.4583 3.29167 9.875 3.875C9.29167 4.45833 9 5.16667 9 6Z" fill="#0077B6" fill-opacity="0.6"/>
-                    </g>
-                </svg>
-                <span class="font-openSans">Bags</span>
-            </a>
+                <a href="#" class="flex flex-row items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_50_614" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_50_614)">
+                          <path d="M6 10.95L5 11.5C4.76666 11.6333 4.51666 11.6667 4.25 11.6C3.98333 11.5333 3.78333 11.3833 3.65 11.15L1.65 7.65C1.51666 7.41667 1.48333 7.16667 1.55 6.9C1.61666 6.63333 1.76666 6.43333 2 6.3L7.75 3H9.5C9.65 3 9.77083 3.04583 9.8625 3.1375C9.95416 3.22917 10 3.35 10 3.5V4C10 4.55 10.1958 5.02083 10.5875 5.4125C10.9792 5.80417 11.45 6 12 6C12.55 6 13.0208 5.80417 13.4125 5.4125C13.8042 5.02083 14 4.55 14 4V3.5C14 3.35 14.0458 3.22917 14.1375 3.1375C14.2292 3.04583 14.35 3 14.5 3H16.25L22 6.3C22.2333 6.43333 22.3833 6.63333 22.45 6.9C22.5167 7.16667 22.4833 7.41667 22.35 7.65L20.35 11.15C20.2167 11.3833 20.0208 11.5292 19.7625 11.5875C19.5042 11.6458 19.25 11.6083 19 11.475L18 10.975V20C18 20.2833 17.9042 20.5208 17.7125 20.7125C17.5208 20.9042 17.2833 21 17 21H7C6.71666 21 6.47916 20.9042 6.2875 20.7125C6.09583 20.5208 6 20.2833 6 20V10.95ZM8 7.6V19H16V7.6L19.1 9.3L20.15 7.55L15.85 5.05C15.6 5.9 15.1292 6.60417 14.4375 7.1625C13.7458 7.72083 12.9333 8 12 8C11.0667 8 10.2542 7.72083 9.5625 7.1625C8.87083 6.60417 8.4 5.9 8.15 5.05L3.85 7.55L4.9 9.3L8 7.6Z" fill="#0077B6" fill-opacity="0.6"/>
+                        </g>
+                    </svg>
+                    <span class="font-openSans">Blouse</span>
+                </a>
 
-            <a href="#" class="flex flex-row items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <mask id="mask0_50_614" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                      <rect width="24" height="24" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_50_614)">
-                      <path d="M6 10.95L5 11.5C4.76666 11.6333 4.51666 11.6667 4.25 11.6C3.98333 11.5333 3.78333 11.3833 3.65 11.15L1.65 7.65C1.51666 7.41667 1.48333 7.16667 1.55 6.9C1.61666 6.63333 1.76666 6.43333 2 6.3L7.75 3H9.5C9.65 3 9.77083 3.04583 9.8625 3.1375C9.95416 3.22917 10 3.35 10 3.5V4C10 4.55 10.1958 5.02083 10.5875 5.4125C10.9792 5.80417 11.45 6 12 6C12.55 6 13.0208 5.80417 13.4125 5.4125C13.8042 5.02083 14 4.55 14 4V3.5C14 3.35 14.0458 3.22917 14.1375 3.1375C14.2292 3.04583 14.35 3 14.5 3H16.25L22 6.3C22.2333 6.43333 22.3833 6.63333 22.45 6.9C22.5167 7.16667 22.4833 7.41667 22.35 7.65L20.35 11.15C20.2167 11.3833 20.0208 11.5292 19.7625 11.5875C19.5042 11.6458 19.25 11.6083 19 11.475L18 10.975V20C18 20.2833 17.9042 20.5208 17.7125 20.7125C17.5208 20.9042 17.2833 21 17 21H7C6.71666 21 6.47916 20.9042 6.2875 20.7125C6.09583 20.5208 6 20.2833 6 20V10.95ZM8 7.6V19H16V7.6L19.1 9.3L20.15 7.55L15.85 5.05C15.6 5.9 15.1292 6.60417 14.4375 7.1625C13.7458 7.72083 12.9333 8 12 8C11.0667 8 10.2542 7.72083 9.5625 7.1625C8.87083 6.60417 8.4 5.9 8.15 5.05L3.85 7.55L4.9 9.3L8 7.6Z" fill="#0077B6" fill-opacity="0.6"/>
-                    </g>
-                </svg>
-                <span class="font-openSans">Blouse</span>
-            </a>
+                <a href="#" class="flex flex-row items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="26" viewBox="0 0 19 26" fill="none">
+                        <path d="M9.42622 8.88533C8.3473 8.88533 7.3468 9.62718 7.3468 10.0774C7.3468 10.5276 6.50403 25 6.50403 25H1V8.39184V3.12451V1H9.42774H17.8555V3.12451V8.39184V25H12.3514C12.3514 25 11.5087 10.5276 11.5087 10.0774C11.5087 9.62714 10.5082 8.88533 9.42925 8.88533" stroke="#0077B6" stroke-opacity="0.6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.63843 3.99707C10.1039 3.99707 10.4812 3.61975 10.4812 3.1543C10.4812 2.68885 10.1039 2.31152 9.63843 2.31152C9.17298 2.31152 8.79565 2.68885 8.79565 3.1543C8.79565 3.61975 9.17298 3.99707 9.63843 3.99707Z" fill="#0077B6"/>
+                        <path d="M14.1642 2.41992C14.1642 2.41992 13.1516 6.18628 16.7294 7.25179" stroke="#0077B6" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.69121 2.41992C4.69121 2.41992 5.7038 6.18628 2.12598 7.25179" stroke="#0077B6" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="font-openSans">Trousers</span>
+                </a>
 
-            <a href="#" class="flex flex-row items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="26" viewBox="0 0 19 26" fill="none">
-                    <path d="M9.42622 8.88533C8.3473 8.88533 7.3468 9.62718 7.3468 10.0774C7.3468 10.5276 6.50403 25 6.50403 25H1V8.39184V3.12451V1H9.42774H17.8555V3.12451V8.39184V25H12.3514C12.3514 25 11.5087 10.5276 11.5087 10.0774C11.5087 9.62714 10.5082 8.88533 9.42925 8.88533" stroke="#0077B6" stroke-opacity="0.6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9.63843 3.99707C10.1039 3.99707 10.4812 3.61975 10.4812 3.1543C10.4812 2.68885 10.1039 2.31152 9.63843 2.31152C9.17298 2.31152 8.79565 2.68885 8.79565 3.1543C8.79565 3.61975 9.17298 3.99707 9.63843 3.99707Z" fill="#0077B6"/>
-                    <path d="M14.1642 2.41992C14.1642 2.41992 13.1516 6.18628 16.7294 7.25179" stroke="#0077B6" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4.69121 2.41992C4.69121 2.41992 5.7038 6.18628 2.12598 7.25179" stroke="#0077B6" stroke-opacity="0.6" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span class="font-openSans">Trousers</span>
-            </a>
-
-            <a href="#" class="flex flex-row items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <mask id="mask0_50_626" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                      <rect width="24" height="24" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_50_626)">
-                      <path d="M7.875 18C6.59167 18 5.61667 17.525 4.95 16.575C4.28333 15.625 3.96667 14.5583 4 13.375L3.55 12.7C3.36667 12.4167 3.0625 11.775 2.6375 10.775C2.2125 9.775 2 8.51667 2 7C2 5.28333 2.425 3.85417 3.275 2.7125C4.125 1.57083 5.2 1 6.5 1C7.91667 1 9.02083 1.62917 9.8125 2.8875C10.6042 4.14583 11 5.51667 11 7C11 7.96667 10.8667 8.85833 10.6 9.675C10.3333 10.4917 10.1 11.15 9.9 11.65L10.1 11.975C10.2333 12.2083 10.4167 12.5792 10.65 13.0875C10.8833 13.5958 11 14.125 11 14.675C11 15.625 10.7042 16.4167 10.1125 17.05C9.52083 17.6833 8.775 18 7.875 18ZM5.25 11.6L8 11.05C8.21667 10.5167 8.4375 9.90833 8.6625 9.225C8.8875 8.54167 9 7.8 9 7C9 6 8.77083 5.08333 8.3125 4.25C7.85417 3.41667 7.25 3 6.5 3C5.75 3 5.14583 3.41667 4.6875 4.25C4.22917 5.08333 4 6 4 7C4 8.05 4.14583 8.97917 4.4375 9.7875C4.72917 10.5958 5 11.2 5.25 11.6ZM7.875 16C8.19167 16 8.45833 15.8833 8.675 15.65C8.89167 15.4167 9 15.0917 9 14.675C9 14.3917 8.93333 14.1 8.8 13.8C8.66667 13.5 8.53333 13.2333 8.4 13L6 13.5C6 14.1667 6.14583 14.75 6.4375 15.25C6.72917 15.75 7.20833 16 7.875 16ZM16.125 23C15.225 23 14.4792 22.6833 13.8875 22.05C13.2958 21.4167 13 20.625 13 19.675C13 19.125 13.1167 18.5958 13.35 18.0875C13.5833 17.5792 13.7667 17.2083 13.9 16.975L14.1 16.65C13.9 16.15 13.6667 15.4917 13.4 14.675C13.1333 13.8583 13 12.9667 13 12C13 10.5167 13.3958 9.14583 14.1875 7.8875C14.9792 6.62917 16.0833 6 17.5 6C18.8 6 19.875 6.57083 20.725 7.7125C21.575 8.85417 22 10.2833 22 12C22 13.5167 21.7875 14.7708 21.3625 15.7625C20.9375 16.7542 20.6333 17.3917 20.45 17.675L20 18.375C20.0167 19.5583 19.6958 20.625 19.0375 21.575C18.3792 22.525 17.4083 23 16.125 23ZM18.75 16.6C19 16.2 19.2708 15.6 19.5625 14.8C19.8542 14 20 13.0667 20 12C20 11 19.7708 10.0833 19.3125 9.25C18.8542 8.41667 18.25 8 17.5 8C16.75 8 16.1458 8.41667 15.6875 9.25C15.2292 10.0833 15 11 15 12C15 12.8 15.1125 13.5375 15.3375 14.2125C15.5625 14.8875 15.7833 15.5 16 16.05L18.75 16.6ZM16.125 21C16.7917 21 17.2708 20.75 17.5625 20.25C17.8542 19.75 18 19.1667 18 18.5L15.6 18C15.4667 18.2333 15.3333 18.5 15.2 18.8C15.0667 19.1 15 19.3917 15 19.675C15 20.0083 15.1042 20.3125 15.3125 20.5875C15.5208 20.8625 15.7917 21 16.125 21Z" fill="#0077B6" fill-opacity="0.6"/>
-                    </g>
-                </svg>
-                <span class="font-openSans">Shoes</span>
-            </a>
-        </div>
+                <a href="#" class="flex flex-row items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_50_626" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_50_626)">
+                          <path d="M7.875 18C6.59167 18 5.61667 17.525 4.95 16.575C4.28333 15.625 3.96667 14.5583 4 13.375L3.55 12.7C3.36667 12.4167 3.0625 11.775 2.6375 10.775C2.2125 9.775 2 8.51667 2 7C2 5.28333 2.425 3.85417 3.275 2.7125C4.125 1.57083 5.2 1 6.5 1C7.91667 1 9.02083 1.62917 9.8125 2.8875C10.6042 4.14583 11 5.51667 11 7C11 7.96667 10.8667 8.85833 10.6 9.675C10.3333 10.4917 10.1 11.15 9.9 11.65L10.1 11.975C10.2333 12.2083 10.4167 12.5792 10.65 13.0875C10.8833 13.5958 11 14.125 11 14.675C11 15.625 10.7042 16.4167 10.1125 17.05C9.52083 17.6833 8.775 18 7.875 18ZM5.25 11.6L8 11.05C8.21667 10.5167 8.4375 9.90833 8.6625 9.225C8.8875 8.54167 9 7.8 9 7C9 6 8.77083 5.08333 8.3125 4.25C7.85417 3.41667 7.25 3 6.5 3C5.75 3 5.14583 3.41667 4.6875 4.25C4.22917 5.08333 4 6 4 7C4 8.05 4.14583 8.97917 4.4375 9.7875C4.72917 10.5958 5 11.2 5.25 11.6ZM7.875 16C8.19167 16 8.45833 15.8833 8.675 15.65C8.89167 15.4167 9 15.0917 9 14.675C9 14.3917 8.93333 14.1 8.8 13.8C8.66667 13.5 8.53333 13.2333 8.4 13L6 13.5C6 14.1667 6.14583 14.75 6.4375 15.25C6.72917 15.75 7.20833 16 7.875 16ZM16.125 23C15.225 23 14.4792 22.6833 13.8875 22.05C13.2958 21.4167 13 20.625 13 19.675C13 19.125 13.1167 18.5958 13.35 18.0875C13.5833 17.5792 13.7667 17.2083 13.9 16.975L14.1 16.65C13.9 16.15 13.6667 15.4917 13.4 14.675C13.1333 13.8583 13 12.9667 13 12C13 10.5167 13.3958 9.14583 14.1875 7.8875C14.9792 6.62917 16.0833 6 17.5 6C18.8 6 19.875 6.57083 20.725 7.7125C21.575 8.85417 22 10.2833 22 12C22 13.5167 21.7875 14.7708 21.3625 15.7625C20.9375 16.7542 20.6333 17.3917 20.45 17.675L20 18.375C20.0167 19.5583 19.6958 20.625 19.0375 21.575C18.3792 22.525 17.4083 23 16.125 23ZM18.75 16.6C19 16.2 19.2708 15.6 19.5625 14.8C19.8542 14 20 13.0667 20 12C20 11 19.7708 10.0833 19.3125 9.25C18.8542 8.41667 18.25 8 17.5 8C16.75 8 16.1458 8.41667 15.6875 9.25C15.2292 10.0833 15 11 15 12C15 12.8 15.1125 13.5375 15.3375 14.2125C15.5625 14.8875 15.7833 15.5 16 16.05L18.75 16.6ZM16.125 21C16.7917 21 17.2708 20.75 17.5625 20.25C17.8542 19.75 18 19.1667 18 18.5L15.6 18C15.4667 18.2333 15.3333 18.5 15.2 18.8C15.0667 19.1 15 19.3917 15 19.675C15 20.0083 15.1042 20.3125 15.3125 20.5875C15.5208 20.8625 15.7917 21 16.125 21Z" fill="#0077B6" fill-opacity="0.6"/>
+                        </g>
+                    </svg>
+                    <span class="font-openSans">Shoes</span>
+                </a>
+            </div>
         </div>
 
-        <div class="prices md:py-5">
+        <div class="prices md:py-5 lg:bg-white lg:rounded-3xl lg:px-5">
             <h3 class="font-playfairDisplay text-xl font-semibold">Price Range</h3>
             <div class="flex flex-col px-4 py-4 gap-2">
                 <input type="range" name="price_range" id="price_range" min="0" max="100000">
@@ -175,10 +173,10 @@
         </div>
 
       </aside>
-      <div class="main-content">
+      <div class="main-content lg:grid col-span-6">
         <div class="filters_card_list flex flex-row justify-between items-center">
-          <div class="filter flex flex-row gap-3 items-center">
-              <a href="#" class="font-openSans font-semibold text-xl text-[rgba(2, 2, 2, 0.60)] transition-transform hover:scale-150">Latest</a>
+          <div class="filter flex flex-row gap-3 items-center lg:pt-7">
+              <a href="#" class="font-openSans font-semibold text-xl text-[rgba(2, 2, 2, 0.60)]">Latest</a>
               <a href="#" class="font-openSans font-semibold text-xl text-[rgba(2, 2, 2, 0.60)]">Popular</a>
               <a href="#" class="font-openSans font-semibold text-xl text-[rgba(2, 2, 2, 0.60)]">All</a>
           </div>
@@ -204,7 +202,7 @@
 
       <div class="promoted_shop flex flex-col py-5 gap-2 relative">
           <span class="font-openSans text-sm text-gray-500">Promoted Shop</span>
-          <div class="card w-full min-h-[12rem] h-auto bg-shop rounded-3xl px-3 md:px-6 py-5 flex flex-row items-center justify-between relative">
+          <div class="card w-full min-h-[12rem]  h-auto bg-shop rounded-3xl px-3 md:px-6 py-5 flex flex-row items-center justify-between relative">
               <section class="flex flex-col gap-4 md:justify-evenly md:gap-5">
                   <h2 class="font-poppins font-bold text-xl md:text-3xl">Ohene's Creative Closet</h2>
                   <span class="font-poppins text-sm md:text-base font-bold text-gray-500">Get all your stylish shoes from us</span>
@@ -220,13 +218,13 @@
                       </svg>
                   </a>
               </section>
-              <section class="w-1/2 md:w-1/3">
+              <section class="w-1/2 md:w-1/3 lg:w-1/4">
                   <img src="./imgs/oh.png" alt="" class="w-full">
               </section>
           </div>
       </div>
 
-      <div class="post-container grid grid-cols-2 gap-x-2 gap-y-4 md:gap-4 p-2">
+      <div class="post-container grid grid-cols-2 gap-x-2 gap-y-4 md:gap-4 p-2 lg:grid-cols-3">
 
           <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
               <div class="product-img ">
@@ -244,7 +242,7 @@
               </div>
           </a>
 
-          <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
+          <a href="#" class="card h-fit min-h-[11rem] lg:min-h-[6rem] bg-white rounded-b-xl relative">
               <div class="product-img">
                   <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl">
               </div>
@@ -260,7 +258,7 @@
               </div>
           </a>
 
-          <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
+          <a href="#" class="card h-fit min-h-[11rem] lg:min-h-[6rem] bg-white rounded-b-xl relative">
               <div class="product-img">
                   <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl">
               </div>
@@ -276,7 +274,7 @@
               </div>
           </a>
 
-          <a href="#" class="card h-fit min-h-[11rem] bg-white rounded-b-xl relative">
+          <a href="#" class="card h-fit min-h-[11rem] lg:min-h-[6rem] bg-white rounded-b-xl relative">
               <div class="product-img">
                   <img src="./imgs/pexels-jordan-hyde-1070360.jpg" alt="" class=" h-3/4 w-full object-cover rounded-t-xl">
               </div>
